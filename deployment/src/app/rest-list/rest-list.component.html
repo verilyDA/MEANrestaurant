@@ -1,0 +1,20 @@
+<fieldset>
+<legend>Restaurant List</legend>
+<button (click)='newR()'>New Restaurant</button>
+<table>
+<tr>
+<th>Restaurant</th>
+<th>Cuisine</th>
+<th>Actions Available</th>
+</tr>
+<tr *ngFor='let rest of rests' id='{{rest._id}}'>
+<td>{{rest.name}}</td>
+<td>{{rest.cuisine}}</td>
+<td>
+<button class='review' (click)='readReview(rest._id)'>Read Reviews</button>
+<button class='update' (click)='update(rest._id)'>Update</button>
+<button class='delete' (click)='delete(rest._id)'>Delete</button>
+</td>
+</tr>
+</table>
+</fieldset>

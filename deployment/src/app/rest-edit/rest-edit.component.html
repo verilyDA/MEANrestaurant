@@ -1,0 +1,12 @@
+<fieldset>
+<legend>Edit - {{rest.name}}</legend>
+Restaurant Name:<br>
+<input #name value='{{rest.name}}'><br>
+Cuisine:<br>
+<input #cuisine value='{{rest.cuisine}}'><br>
+<div *ngIf='errMsg'>
+    {{ errMsg }}
+</div>
+<button class='cancel' (click)='cancel()'>Cancel</button>
+<button class='yes' (click)='edit(name.value, cuisine.value)'>Edit</button>
+</fieldset>

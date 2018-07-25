@@ -1,0 +1,17 @@
+<fieldset>
+<legend>Restaurant Reviews - {{rest.name}}</legend>
+<button (click)='newReview()'>New Review</button> - 
+<button (click)='goBack()'>Go Back</button><br>
+<table>
+<tr>
+<th>Customer</th>
+<th>Stars</th>
+<th>Description</th>
+</tr>
+<tr *ngFor='let comment of comments'>
+<td>{{comment.name}}</td>
+<td>{{comment.stars}}</td>
+<td>{{comment.desc}}</td>
+</tr>
+</table>
+</fieldset>

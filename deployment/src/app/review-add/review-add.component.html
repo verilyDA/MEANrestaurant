@@ -1,0 +1,15 @@
+<fieldset>
+<legend>Write a review</legend>
+Your Name:<br>
+<input #name><br>
+Stars<br>
+<input type='number' min='1' max='5' #stars>
+<br>
+Your Review:<br>
+<input #desc><br>
+<div *ngIf='errMsg'>
+{{errMsg}}
+</div>
+<button class='cancel' (click)='cancel()'>Cancel</button>
+<button class='yes' (click)='submit(name.value, stars.value, desc.value)'>Submit</button>
+</fieldset>
